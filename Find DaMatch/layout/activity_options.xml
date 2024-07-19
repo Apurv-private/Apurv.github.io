@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2ECC71"
+    tools:context=".GUI.Options">
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintGuide_percent="0.5"
+    app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/options"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/optionsChooseImgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/options_choose_img"
+        app:layout_constraintEnd_toStartOf="@+id/optionsSpinImgs"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+
+    <TextView
+        android:id="@+id/optionsTxtMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/game_mode"
+        app:layout_constraintEnd_toStartOf="@+id/optionsSpinMode"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsChooseImgs" />
+
+    <TextView
+        android:id="@+id/optionsTxtOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/order_selection"
+        app:layout_constraintEnd_toStartOf="@+id/optionsSpinOrder"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTxtMode" />
+
+    <TextView
+        android:id="@+id/optionsTxtDrawPile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/draw_pile_cards_size"
+        app:layout_constraintEnd_toStartOf="@+id/optionsSpinSize"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTxtOrder" />
+
+    <TextView
+        android:id="@+id/optionsTxtReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/reset_txt"
+        app:layout_constraintEnd_toStartOf="@+id/optionsBtnReset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsBtnFlickr" />
+
+    <EditText
+        android:id="@+id/optionsEditUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/username_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/optionsConfirmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTxtReset" />
+
+    <Spinner
+        android:id="@+id/optionsSpinImgs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsChooseImgs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/optionsChooseImgs" />
+
+    <Spinner
+        android:id="@+id/optionsSpinMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsTxtMode"
+        app:layout_constraintEnd_toEndOf="@+id/optionsSpinImgs"
+        app:layout_constraintTop_toTopOf="@+id/optionsTxtMode" />
+
+    <Spinner
+        android:id="@+id/optionsSpinOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsTxtOrder"
+        app:layout_constraintEnd_toEndOf="@+id/optionsSpinMode"
+        app:layout_constraintTop_toTopOf="@+id/optionsTxtOrder" />
+
+    <Spinner
+        android:id="@+id/optionsSpinSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsTxtDrawPile"
+        app:layout_constraintEnd_toEndOf="@+id/optionsSpinOrder"
+        app:layout_constraintTop_toTopOf="@+id/optionsTxtDrawPile" />
+
+    <Button
+        android:id="@+id/optionsBtnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsTxtReset"
+        app:layout_constraintEnd_toEndOf="@+id/optionsBtnDownload"
+        app:layout_constraintTop_toTopOf="@+id/optionsTxtReset" />
+
+    <Button
+        android:id="@+id/optionsConfirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#64B5F6"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsEditUser"
+        app:layout_constraintEnd_toEndOf="@+id/optionsBtnReset"
+        app:layout_constraintTop_toTopOf="@+id/optionsEditUser" />
+
+    <Button
+        android:id="@+id/optionsBtnFlickr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/select_images"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+
+    <Button
+        android:id="@+id/optionsBtnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/download"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsBtnFlickr"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/optionsBtnFlickr"
+        app:layout_constraintVertical_bias="0.531" />
+
+
+
+    <TextView
+        android:id="@+id/optionsTxtDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/options_difficulty"
+        app:layout_constraintEnd_toStartOf="@+id/optionsSpinDifficulty"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTxtDrawPile" />
+
+    <Spinner
+        android:id="@+id/optionsSpinDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/optionsTxtDifficulty"
+        app:layout_constraintEnd_toEndOf="@+id/optionsSpinSize"
+        app:layout_constraintTop_toTopOf="@+id/optionsTxtDifficulty" />
+
+    <Button
+        android:id="@+id/Button_cardsSaved"
+        android:layout_width="114dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:text="Click to save cards"
+        app:layout_constraintEnd_toStartOf="@+id/optionsTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SelectOwnPicFromGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select from Gallery"
+        app:layout_constraintEnd_toEndOf="@+id/optionsEditUser"
+        app:layout_constraintStart_toStartOf="@+id/optionsEditUser"
+        app:layout_constraintTop_toBottomOf="@+id/optionsEditUser" />
+
+    <Button
+        android:id="@+id/editPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="edit photo"
+        app:layout_constraintStart_toEndOf="@+id/SelectOwnPicFromGallery"
+        app:layout_constraintTop_toBottomOf="@+id/optionsEditUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

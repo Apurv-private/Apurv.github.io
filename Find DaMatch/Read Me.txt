@@ -1,0 +1,68 @@
+Title: Find DaMatch Game
+-----------------------
+
+Welcome to the Find DaMatch Game! This Android application involves
+matching cards in a grid to clear them. The goal is to find all the
+matching pairs and achieve the best score possible.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. Game.java
+   - Overview: 
+     This is the main activity for the game where players interact with
+     the card grid to find matching pairs.
+   - Key Features:
+     - Generates a grid of buttons representing the game deck and discard pile.
+     - Handles user interactions with buttons for matching cards.
+     - Manages game state, including card matching, score tracking, and game-over logic.
+     - Provides functionality to save screenshots of the game state.
+     - Plays sound effects based on user actions.
+     - Displays a chronometer to track the game time.
+     - Saves high scores and player information to SharedPreferences.
+
+2. GameLogic.java
+   - Overview: 
+     Manages the game logic including card matching, scoring, and game state.
+   - Key Features:
+     - Initializes the game deck and discard pile.
+     - Handles card matching logic and updates the game state.
+     - Provides methods to get and set game parameters like card images and deck size.
+
+3. MusicPlayer.java
+   - Overview: 
+     Manages audio playback within the game.
+   - Key Features:
+     - Plays background music and sound effects.
+     - Provides functionality to control audio playback.
+
+Usage Instructions
+------------------
+
+1. Launching the App:
+   - The app starts with the Game activity, displaying the game interface.
+   - Tap the "Ready" button to start the game and lock the button sizes.
+
+2. Playing the Game:
+   - Objective: Find and match all pairs of cards in the grid.
+   - Controls: Tap a card to check for a match. If the cards match, they are removed from the grid.
+   - Status Updates: The game displays the number of cards left, the elapsed time, and the high score.
+   - Saving Progress: The game saves screenshots of the game state upon matching pairs.
+
+3. Game Over:
+   - Once all pairs are found, the game stops the chronometer, calculates the score, and saves it.
+   - Displays a dialog with the final score and options for the next steps.
+
+Code Structure and Comments
+---------------------------
+- The code is organized into three main classes handling different aspects of the app.
+- Comments are added throughout the code to explain the functionality of methods and key logic.
+
+Animations and Sounds
+---------------------
+- Animations: Utilizes Android’s built-in animations for button interactions and state changes.
+- Sounds: Uses MediaPlayer to load and play audio effects for various game events.
+
+Author and License
+------------------
+- Developed by Apurv Nerurkar & Members.
