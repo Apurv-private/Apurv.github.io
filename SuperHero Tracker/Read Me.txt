@@ -1,0 +1,88 @@
+Title: SuperHero Tracker
+------------------------
+
+Welcome to the SuperHero Tracker! This Java application allows users 
+to manage a list of superheroes. You can add, remove, and update 
+superheroes, as well as view top superheroes based on the number of 
+civilians they have saved.
+
+Files and Directories
+---------------------
+1. main.java - The main class that contains the logic for the application.
+2. superhero.java - A class representing individual superheroes.
+3. text.java - A class for displaying a text menu.
+
+Dependencies
+------------
+- Gson library for JSON processing.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **main.java**
+   - **Overview**: 
+     The main class where the application runs. It provides a text-based 
+     menu for users to interact with the list of superheroes.
+   - **Key Features**:
+     - Reads superhero data from a JSON file using Gson.
+     - Displays a menu for various operations (list, add, remove, update, 
+       list top superheroes, debug dump, exit).
+     - Allows users to list all superheroes, add new ones, remove existing 
+       ones, and update the number of civilians saved.
+     - Displays the top 3 superheroes based on the number of civilians saved.
+     - Saves the updated superhero list back to the JSON file.
+
+2. **superhero.java**
+   - **Overview**: 
+     Represents a superhero with properties like name, superpower, and 
+     height.
+   - **Key Features**:
+     - Methods for printing superhero details and updating the number of 
+       civilians saved.
+     - Provides functionality for comparison based on civilians saved.
+
+3. **text.java**
+   - **Overview**: 
+     Provides a text-based menu interface for user interaction.
+   - **Key Features**:
+     - Displays menu options and handles user input.
+
+Usage Instructions
+------------------
+
+1. **Launching the App**:
+   - Run the `main.java` file to start the application.
+
+2. **Menu Options**:
+   - **List all superheroes**: Displays the list of all superheroes.
+   - **Add a new superhero**: Prompts for superhero details and adds it 
+     to the list.
+   - **Remove a superhero**: Prompts for the superhero number to remove 
+     from the list.
+   - **Update number of civilians saved**: Allows updating the civilian 
+     count for a specific superhero.
+   - **List Top 3 superheroes**: Displays the top 3 superheroes based on 
+     the number of civilians saved.
+   - **Debug Dump (toString)**: Displays the details of all superheroes 
+     using the `toString()` method.
+   - **Exit**: Saves changes and exits the application.
+
+3. **Handling Errors**:
+   - If an invalid menu option is selected, the application prompts the 
+     user to enter a valid option.
+
+Code Structure and Comments
+---------------------------
+- The code is divided into three main classes: `main`, `superhero`, and 
+  `text`.
+- Comments are provided to explain the functionality of methods and 
+  important logic.
+
+Dependencies
+------------
+- Gson library: Required for JSON processing. Ensure you have the Gson 
+  library included in your project.
+
+Author and License
+------------------
+- Developed by Apurv Nerurkar 
