@@ -1,0 +1,83 @@
+Title: Bubonic Plague
+-----------------------
+
+Welcome to the Bubonic Plague Game! This Android application involves 
+scanning a grid to find hidden viruses. Your objective is to locate 
+all the viruses on the grid with the least number of scans.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **MainActivity.java**
+   - **Overview**: 
+     This is the splash screen of the app which shows the 
+     game name and author names with animations.
+   - **Key Features**:
+     - Splash screen with fade-in and translation animations.
+     - Sound effects using SoundPool for button interactions.
+     - A "Skip Animation" button to proceed directly to the Main Menu.
+
+2. **MainMenu.java**
+   - **Overview**: 
+     This is the main menu of the app where players can navigate to 
+     different parts of the app.
+   - **Key Features**:
+     - Animated menu text and buttons.
+     - Buttons for navigating to Help, Options, and Game screens.
+     - Refreshes and displays the number of viruses selected and the 
+       board size from the Options.
+
+3. **Game.java**
+   - **Overview**: 
+     The core of the game where players interact with the grid to 
+     locate viruses.
+   - **Key Features**:
+     - Generates a grid of buttons that represent cells in the game.
+     - Randomly places viruses on the grid and updates the display 
+       when cells are clicked.
+     - Scans rows and columns of clicked cells for viruses and updates 
+       the display with the count of undetected viruses.
+     - Plays sound effects based on interactions.
+     - Displays current statistics such as times played, viruses found, 
+       and scans used.
+     - Saves high score and times played to a JSON file.
+
+Usage Instructions
+------------------
+1. **Launching the App**:
+   - The app starts with the MainActivity, displaying a splash screen 
+     with animations and sound. Press "Skip Animation" to proceed 
+     directly to the Main Menu.
+
+2. **Main Menu**:
+   - **Help**: Displays help information.
+   - **Options**: Allows you to configure game settings like the number 
+     of viruses and board size.
+   - **Start Game**: Launches the game.
+
+3. **Playing the Game**:
+   - **Objective**: Scan the grid to find all hidden viruses with the 
+     least number of scans.
+   - **Controls**: Tap a cell to scan the row and column for viruses.
+   - **Status Updates**: The game displays the number of viruses found, 
+     total viruses, scans used, and times played.
+   - **Winning the Game**: Once all viruses are found, the game ends 
+     and saves statistics.
+
+Code Structure and Comments
+---------------------------
+- The code is organized into three main classes corresponding to 
+  different screens of the app.
+- Comments are added throughout the code to explain the functionality 
+  of methods and important logic.
+
+Animations and Sounds
+---------------------
+- Animations: Uses Android's AnimationUtils for fade-in and translation 
+  effects to enhance the user experience.
+- Sounds: Uses SoundPool to load and play audio effects for button 
+  interactions and game events.
+
+Author and License
+------------------
+- Developed by Apurv Nerurkar.

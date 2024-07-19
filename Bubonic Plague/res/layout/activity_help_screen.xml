@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TextUI.HelpScreen">
+
+    <TextView
+        android:id="@+id/Text_About"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/author"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_help" />
+
+    <TextView
+        android:id="@+id/Text_Link"
+        android:layout_width="405dp"
+        android:layout_height="22dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/https_opencoursehub_cs_sfu_ca_bfraser_grav_cms_cmpt276_home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_About" />
+
+    <TextView
+        android:id="@+id/Text_Rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gamerules"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Link" />
+
+    <TextView
+        android:id="@+id/Text_gameBasics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/Text_Rules"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Rules" />
+
+    <TextView
+        android:id="@+id/Text_gameRules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_gameBasics" />
+
+    <TextView
+        android:id="@+id/Text_endGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_gameRules" />
+
+    <TextView
+        android:id="@+id/Text_tactics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_endGame" />
+
+    <TextView
+        android:id="@+id/Text_citation_startGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/Text_tactics"
+        tools:ignore="MissingConstraints,SmallSp"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/Text_citation_HelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Text_citation_startGame"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citation_startGame"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_citation_OptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/Text_citation_HelpButton"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citation_HelpButton"
+        tools:ignore="SmallSp" />
+
+
+    <TextView
+        android:id="@+id/TextCitationOther"
+        android:layout_width="166dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="164dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/http_soundbible_com_1821_imac_startup_chime_html"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Link"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/TextCitationSkip"
+        android:layout_width="166dp"
+        android:layout_height="18dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/http_soundbible_com_1294_button_click_off_html"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextCitationOther"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_citationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citation_OptionsButton"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_citationBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citationIcon"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_citationVirus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/textview"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citationBackground"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_citationVirusScan"
+        android:layout_width="166dp"
+        android:layout_height="18dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/https_www_myinstants_com_instant_mortal_kombat_fatality"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextCitationSkip"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/Text_help"
+        android:layout_width="90dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/help"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Text_citationScan"
+        android:layout_width="166dp"
+        android:layout_height="18dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/https_freesound_org_people_electroviolence_sounds_234553"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_citationVirusScan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
