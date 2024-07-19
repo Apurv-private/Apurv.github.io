@@ -1,0 +1,41 @@
+Camera Depth of Field Calculator
+
+Overview
+This Java application is designed to help photographers calculate the depth of field (DoF) in their photographs. The depth of field refers to the range within a photo that appears acceptably sharp. This application calculates the DoF based on various lens and camera settings, which is crucial for photographers aiming to achieve the desired focus in their shots.
+
+Features
+- Lens Management: Store and manage a collection of camera lenses, each characterized by its make, maximum aperture, and focal length.
+- Depth of Field Calculation: Calculate the hyperfocal distance, near and far focal points, and the overall depth of field using lens specifications and camera settings.
+- User Interaction: A text-based user interface allows users to select a lens, input aperture values, and specify the distance to the subject for DoF calculations.
+- GitLab Integration: The project includes integration with SFU's GitLab for version control, emphasizing frequent commits for robust code management.
+
+Program Structure
+The application is organized into two main packages:
+
+Model Package
+- Lens Class: Represents a camera lens with attributes such as make, maximum aperture, and focal length.
+- LensManager Class: Manages a collection of Lens objects, supporting operations like adding new lenses and retrieving them by index.
+- DepthOfFieldCalculator Class: Computes depth of field metrics given a lens and camera settings.
+
+UI Package
+- TextUI Class: Provides a simple text-based interface for user interaction, allowing selection of lenses and input for DoF calculations.
+
+Depth of Field Calculations
+The application calculates the following parameters based on input data:
+
+1. Hyperfocal Distance: The distance beyond which all objects appear in focus.
+   Hyperfocal Distance = (focal length)^2 / (aperture × circle of confusion)
+
+2. Near Focal Point: The closest distance at which objects are in focus.
+   Near Focal Point = (hyperfocal point × distance to subject) / (hyperfocal point + (distance to subject − focal length))
+
+3. Far Focal Point: The farthest distance at which objects are in focus.
+   Far Focal Point = (hyperfocal point × distance to subject) / (hyperfocal point − (distance to subject − focal length))
+
+4. Depth of Field: The range between the near and far focal points.
+   Depth of Field = (far focal point) − (near focal point)
+
+Usage
+- Select a Lens: Choose from a list of available lenses.
+- Input Aperture: Enter an aperture value. Ensure it's not larger than the lens's maximum aperture.
+- Specify Distance: Provide the distance to the subject for which the DoF needs to be calculated.
