@@ -1,0 +1,79 @@
+Camera Lens Manager
+
+Overview
+---------
+This Android application is designed to manage a collection of camera lenses and calculate the Depth of Field (DoF) based on lens and camera settings. Users can add, view, edit, and delete lenses from their collection, as well as calculate DoF for selected lenses.
+
+Features
+---------
+1. Lens Management: 
+   - Store and manage a collection of camera lenses.
+   - Add new lenses with specific attributes (make, focal length, aperture).
+   - Edit existing lenses to update their attributes.
+   - Delete lenses from the collection.
+   
+2. Depth of Field Calculation:
+   - Select a lens to calculate the Depth of Field using specific parameters.
+
+3. User Interface:
+   - A simple and intuitive UI with a list view displaying available lenses.
+   - Floating action button to add new lenses.
+   - Clickable list items to initiate DoF calculations.
+   - Option to edit lens details from the list.
+
+Application Structure
+---------------------
+The application consists of several key components:
+
+1. MainActivity:
+   - Entry point for the application.
+   - Manages lens data through LensManager and displays it using a ListView.
+   - Handles user interactions such as adding, editing, and calculating DoF for lenses.
+
+2. LensManager:
+   - Singleton class responsible for managing the collection of Lens objects.
+   - Provides methods to add, retrieve, edit, and delete lenses from the collection.
+
+3. Lens:
+   - Represents a camera lens with attributes such as make, focal length, aperture, and an icon resource ID.
+
+4. Screen2_AddLens:
+   - Activity for adding a new lens to the collection.
+
+5. Screen3_CalculateDOF:
+   - Activity for calculating and displaying Depth of Field for a selected lens.
+
+6. Screen4_EditLens:
+   - Activity for editing the details of an existing lens in the collection.
+
+Key Components Explained
+------------------------
+1. MainActivity.java:
+   - Initializes the lens manager and populates it with default lenses.
+   - Uses an ArrayAdapter to display lenses in a ListView.
+   - Contains methods to handle results from other activities (e.g., adding a lens, editing a lens, or calculating DoF).
+
+   Key Methods:
+   - `onCreate()`: Initializes the activity and sets up UI components.
+   - `onActivityResult()`: Receives data from other activities and updates the lens manager.
+   - `populateLensManager()`: Adds default lenses to the manager.
+   - `populateListView()`: Updates the ListView with the current lens data.
+   - `registerClickCallback()`: Sets up click listeners for list items to calculate DoF or edit lens details.
+
+2. LensManager.java:
+   - Manages the list of Lens objects.
+   - Provides methods to add, get, edit, and remove lenses.
+
+3. Lens.java:
+   - Defines the properties of a lens, such as make, focal length, and aperture.
+   - Includes a method to convert lens attributes to a string for display in the ListView.
+
+4. Screen2_AddLens.java:
+   - Allows users to input lens details and add them to the lens manager.
+
+5. Screen3_CalculateDOF.java:
+   - Facilitates the calculation of Depth of Field based on lens parameters and user input.
+
+6. Screen4_EditLens.java:
+   - Enables users to update the details of an existing lens.
+   - Users can modify lens attributes such as make, focal length, and aperture.
