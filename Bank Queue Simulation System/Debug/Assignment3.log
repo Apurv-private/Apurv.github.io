@@ -1,0 +1,19 @@
+﻿Build started 10/21/2019 2:27:49 PM.
+     1>Project "C:\C++ Programs\CMPT 225\Assignment3\Assignment3\Assignment3.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Assignment3.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BinaryHeap.cpp
+         BinaryHeap.cpp
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(37): error C2146: syntax error : missing ')' before identifier 'EmptyDataCollectionException'
+                 c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(46) : see reference to class template instantiation 'BinaryHeap<ElementType>' being compiled
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(37): error C3646: 'EmptyDataCollectionException' : unknown override specifier
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(37): error C2059: syntax error : ')'
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(43): error C2146: syntax error : missing ')' before identifier 'EmptyDataCollectionException'
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(43): error C3646: 'EmptyDataCollectionException' : unknown override specifier
+     1>c:\c++ programs\cmpt 225\assignment3\assignment3\binaryheap.h(43): error C2059: syntax error : ')'
+     1>Done Building Project "C:\C++ Programs\CMPT 225\Assignment3\Assignment3\Assignment3.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.43

@@ -1,0 +1,62 @@
+Title: Bank Queue Simulation System
+--------------------------------------
+
+Welcome to the Bank Queue Simulation System! This C++ application simulates the processing of customer events in a bank. It manages customer arrivals and departures using a priority queue and a regular queue, and calculates key statistics about customer waiting times.
+
+Files and Directories
+-------------------------
+1. walkIn.cpp - Main file that handles the simulation of customer events.
+2. BinaryHeap.h - Header file defining the BinaryHeap class for the priority queue implementation.
+3. Event.h - Header file defining the Event class, representing customer events.
+4. PriorityQueue.h - Header file defining the PriorityQueue class for managing events.
+5. Queue.h - Header file defining the Queue class for managing customer queues.
+6. EmptyDataCollectionException.h - Header file defining the exception for empty data collections.
+
+Dependencies
+----------------
+- Standard C++ library.
+
+Description of Key Functions
+-----------------------------
+
+1. void processArrival(Event* arrivalEvent, PriorityQueue<Event>& pQueue, Queue<Event>& Q)
+   - Overview: 
+     Handles the arrival of a customer and manages the queue and teller availability.
+   - Key Features:
+     - Processes arrival events and schedules departure events if a teller is available.
+     - Enqueues customers if the teller is not available.
+
+2. void processDeparture(Event* departureEvent, PriorityQueue<Event>& pQueue, Queue<Event>& Q)
+   - Overview: 
+     Manages the departure of a customer and updates the teller's status.
+   - Key Features:
+     - Processes departure events and updates the departure time.
+     - Schedules the next departure if there are customers waiting.
+
+3. void simulate()
+   - Overview: 
+     Runs the simulation based on input data from a file.
+   - Key Features:
+     - Reads customer events from `simulationShuffled1.in`.
+     - Manages the events and calculates statistics about waiting times.
+
+Usage Instructions
+------------------
+1. Compile and run the application:
+   - Compile and execute `walkIn.cpp`.
+
+2. Input Data:
+   - Ensure the input file `simulationShuffled1.in` is in the same directory as the executable.
+
+3. View Results:
+   - After running the simulation, check the console output for statistics on customer processing and waiting times.
+
+Troubleshooting
+---------------
+- Compilation Errors:
+  - Ensure all required header files are present and properly linked.
+  - Verify the code is compiled with a standard C++ compiler.
+
+- Runtime Issues:
+  - Ensure the input file is correctly formatted and located in the right directory.
+  - Follow any error messages displayed during execution.
