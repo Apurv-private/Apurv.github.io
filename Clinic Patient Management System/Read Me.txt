@@ -1,0 +1,79 @@
+Clinic Patient Management System
+------------------------------------------------
+
+Welcome to the CMPT225 Clinic Patient Management System! This C++ console 
+application helps manage patient records at the clinic. Users can add new 
+patients, modify existing records, remove patients, and view patient records.
+
+Files and Directories
+---------------------
+1. walkIn.cpp - Main application file that handles patient record management.
+2. Patient.h - Header file defining the Patient class with attributes and methods.
+3. List.h - Header file defining the List class for managing a collection of Patient records.
+
+Dependencies
+------------
+- Standard C++ library.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **walkIn.cpp**
+   - **Overview**:
+     The main file that drives the application. It manages user interaction 
+     and patient record operations.
+   - **Key Features**:
+     - Prompts the user for a 10-digit CareCard number to identify the patient.
+     - Checks if the patient is already registered and provides options to 
+       modify, remove, or view records.
+     - Allows adding new patients if they are not already registered.
+     - Displays and manages the list of patients who visited the clinic today.
+     - Provides an option to create a new patient list for the next day.
+
+2. **Patient.h**
+   - **Overview**:
+     Defines the Patient class, representing individual patient records.
+   - **Key Features**:
+     - Attributes include first name, last name, address, phone number, and email.
+     - Methods for setting and getting patient details.
+     - Overloaded input (`>>`) and output (`<<`) operators for easy record handling.
+
+3. **List.h**
+   - **Overview**:
+     Manages a collection of Patient records.
+   - **Key Features**:
+     - Methods to insert, search, remove, and print patient records.
+     - Handles operations on the list of patients.
+
+How to Use
+----------
+1. **Run the Application**:
+   - Compile and run `walkIn.cpp`.
+
+2. **Input Patient Information**:
+   - Enter the patient's 10-digit CareCard number when prompted.
+
+3. **Registered Patients**:
+   - If already registered, choose options to modify, remove, or view the record.
+   - Modify: Update first name, address, email, or phone number.
+   - Remove: Remove the patient’s record from the system.
+   - Show: Display the current record details.
+
+4. **New Patients**:
+   - If not registered, input all required details to add a new patient record.
+
+5. **Daily Operations**:
+   - After processing records, the application displays the list of patients 
+     for the day.
+   - Choose to create a new list for the next day by pressing 'l'.
+
+Troubleshooting
+---------------
+- **Compilation Errors**:
+  - Ensure all necessary files (Patient.cpp, List.cpp, etc.) are in the same 
+    directory.
+  - Verify that header files are correctly included and paths are set.
+
+- **Runtime Issues**:
+  - Ensure valid inputs are provided (e.g., 10-digit CareCard number).
+  - Check for any displayed errors and follow instructions to resolve them.
