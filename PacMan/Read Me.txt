@@ -1,0 +1,134 @@
+Title: Pac-Man Game Implementation
+----------------------------------
+
+Welcome to the Pac-Man Game Implementation! This Python application features 
+a classic Pac-Man game with various agents and utilities to manage gameplay. 
+Players navigate Pac-Man through a maze, avoiding ghosts and collecting pellets.
+
+Files and Directories
+---------------------
+1. game.py - The main application file that manages the game logic and flow.
+2. bustersGhostAgents.py - Contains agent logic for ghosts with buster behavior.
+3. distanceCalculator.py - Provides functions for calculating distances between 
+   game elements.
+4. ghostAgents.py - Defines different types of ghost agents and their behavior.
+5. inference.py - Implements inference methods for ghost behavior and decision-making.
+6. keyboard.py - Manages keyboard input for controlling Pac-Man.
+7. layout.py - Defines the game layout and maze structure.
+8. pacman.py - Contains the Pac-Man class and its interactions within the game.
+9. projectParams.py - Configuration file with parameters for the game.
+10. testClasses.py - Includes test cases for various classes and game components.
+11. testParser.py - Provides test cases for parsing and handling game data.
+12. testDisplay.py - Contains test cases for the game's visual display.
+
+Dependencies
+------------
+- Python
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **game.py**
+   - **Overview**:
+     The core file that drives the game, handling game initialization, 
+     main loop, and overall game state management.
+   - **Key Features**:
+     - Initializes game elements and sets up the game loop.
+     - Manages game state transitions, such as win/lose conditions.
+     - Coordinates interactions between Pac-Man, ghosts, and game layout.
+
+2. **bustersGhostAgents.py**
+   - **Overview**:
+     Contains logic for ghosts with buster behavior.
+   - **Key Features**:
+     - Implements ghost behavior patterns specific to busters.
+     - Manages ghost movement and interactions with Pac-Man.
+
+3. **distanceCalculator.py**
+   - **Overview**:
+     Provides utility functions for calculating distances between game elements.
+   - **Key Features**:
+     - Functions to compute distances between Pac-Man, ghosts, and pellets.
+
+4. **ghostAgents.py**
+   - **Overview**:
+     Defines different ghost agents and their behavior in the game.
+   - **Key Features**:
+     - Implements various ghost types and their movement strategies.
+     - Handles ghost-specific actions and interactions.
+
+5. **inference.py**
+   - **Overview**:
+     Implements inference methods to understand and predict ghost behavior.
+   - **Key Features**:
+     - Provides algorithms for predicting ghost movements and actions.
+     - Assists in decision-making processes for ghost agents.
+
+6. **keyboard.py**
+   - **Overview**:
+     Manages user input through the keyboard for controlling Pac-Man.
+   - **Key Features**:
+     - Handles key presses and translates them into Pac-Man movements.
+
+7. **layout.py**
+   - **Overview**:
+     Defines the game layout, including the maze and static elements.
+   - **Key Features**:
+     - Configures maze structure, walls, and pellet locations.
+
+8. **pacman.py**
+   - **Overview**:
+     Contains the Pac-Man class and its interactions within the game environment.
+   - **Key Features**:
+     - Manages Pac-Man's movement, collision detection, and interactions.
+
+9. **projectParams.py**
+   - **Overview**:
+     Configuration file containing parameters for the game settings.
+   - **Key Features**:
+     - Provides adjustable parameters for game difficulty and other settings.
+
+10. **testClasses.py**
+    - **Overview**:
+      Includes test cases for various game classes and components.
+    - **Key Features**:
+      - Tests functionality and behavior of different game classes.
+
+11. **testParser.py**
+    - **Overview**:
+      Provides test cases for parsing game data and handling input.
+    - **Key Features**:
+      - Tests data parsing accuracy and error handling.
+
+12. **testDisplay.py**
+    - **Overview**:
+      Contains test cases for the game's visual display and rendering.
+    - **Key Features**:
+      - Tests the accuracy and performance of the game's visual output.
+
+How to Use
+----------
+1. **Run the Game**:
+   - Execute `game.py` to start the game.
+
+2. **Control Pac-Man**:
+   - Use the keyboard to navigate Pac-Man through the maze.
+
+3. **Gameplay**:
+   - Avoid ghosts and collect pellets to score points.
+   - Follow game instructions and objectives for winning or losing.
+
+4. **Testing**:
+   - Run test files (e.g., `testClasses.py`, `testParser.py`, `testDisplay.py`) 
+     to ensure all components are functioning correctly.
+
+Troubleshooting
+---------------
+- **Errors and Issues**:
+  - Ensure Python is installed and properly configured.
+  - Verify that all necessary files are in the same directory.
+  - Check for any displayed errors and follow instructions to resolve them.
+
+Contact
+-------
+For any questions or issues, please contact the project administrator.
