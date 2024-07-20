@@ -1,0 +1,11 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+int main() {
+    ofstream out("input.txt");
+    float val = 10.0f;
+    out << fixed << setprecision(5) << val << endl;
+    out.close();
+    return 0;
+}
