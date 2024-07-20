@@ -1,0 +1,37 @@
+Title: MPI Sorting Algorithms
+------------------------------------------------
+
+Welcome to the MPI Sorting Algorithms! This C++ application demonstrates the use of MPI (Message Passing Interface) for parallel sorting of floating-point numbers using merge sort. The program is designed to efficiently sort numbers across multiple processors.
+
+Compilation and Execution
+-------------------------
+1. Compile the source code using an MPI compiler, such as `mpic++`:
+
+   mpic++ -o sort_mpi sort_mpi.cpp
+
+2. Execute the program with the desired number of processes. Specify the input size using the `--size` option if needed:
+
+   mpirun -np <number_of_processes> ./sort_mpi --size <input_size>
+
+3. Ensure that the input file `input.txt` is present in the same directory, containing the list of floating-point numbers to sort.
+
+Program Structure
+-----------------
+- `merge()`: Function to merge two sorted halves of the array.
+- `mergeSort()`: Recursive function to divide the array and sort each half.
+- `mergeSortMPI()`: Function to divide sorting tasks among different MPI processes and merge results.
+- `main()`: Entry point of the program, responsible for reading input, initializing MPI, and invoking sorting functions.
+
+Instructions
+------------
+1. Clone or download the source code to your local machine.
+2. Compile and execute the program using the instructions provided above.
+3. The sorted numbers will be output to the console.
+
+License
+-------
+This project is open-source and available under the MIT License. You are free to use, modify, and distribute this code as long as proper credit is given.
+
+Contact
+-------
+For questions or feedback, feel free to reach out
