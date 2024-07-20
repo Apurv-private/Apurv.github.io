@@ -1,0 +1,17 @@
+Author: Apurv Nerurkar & PreeTinder Singh
+Date: 02/10/2019
+
+1)void push(int newElement)
+->It will always take place in time efficiency O(1) as you add only one element at a time and that will get added at the back (as per the requirements of this assignment) by 
+  making the tail point to it and if more elements are there then we have to traverse from the head pointer to the penultimate node and make it point to the new node.
+->Adding a node is done by O(1) and traversing in O(n) which makes the time efficiency O(n)
+
+2)int pop()
+->Removes the last node such that we dont have access to it anymore by making the tail point to the penultimate node and returning the data of the element removed and making the penultimate node's next point to nullptr
+  for which we need to traverse first which takes place in O(n) and removing the node takes place in O(1) which makes the time efficience O(n)
+
+3)int peek()
+->Returns the data of the element at the top of the stack this is done in O(1).
+
+4)bool isEmpty()
+->Return true if the head point to a nullptr if not then returns false.

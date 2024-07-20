@@ -1,0 +1,76 @@
+Title: SmartCare: Patient Records System
+------------------------------------------------
+
+Welcome to the CMPT225 Clinic Patient Management System! This C++ application
+manages patient records for a clinic. It allows users to add new patients,
+modify existing records, remove patients, and view the list of patients who
+visited the clinic today.
+
+Files and Directories
+---------------------
+1. walkIn.cpp - Main file that handles patient record management.
+2. Patient.h - Header file defining the Patient class and its methods.
+3. List.h - Header file defining the List class for managing a collection of Patient records.
+
+Dependencies
+------------
+- Standard C++ library.
+
+Description of Key Functions
+-----------------------------
+
+1. **istream& operator >> (istream& fin, Patient& p)**
+   - **Overview**: 
+     This function is an overloaded operator for inputting patient details.
+   - **Key Features**:
+     - Prompts the user to enter first name, last name, address, phone number,
+       and email.
+     - Sets these details into the Patient object.
+
+2. **void modify(Patient& p)**
+   - **Overview**: 
+     This function allows modification of existing patient records.
+   - **Key Features**:
+     - Provides options to modify the patient's first name, address, email, or phone number.
+     - Allows exiting the modification loop with the 'e' option.
+
+3. **int main()**
+   - **Overview**: 
+     The main function that drives the application.
+   - **Key Features**:
+     - Prompts the user for a 10-digit CareCard number.
+     - Checks if the patient is already registered.
+     - If not registered, collects and saves new patient details.
+     - If registered, provides options to modify, remove, or view the existing record.
+     - Displays the list of patients for the day and offers the option to create a new list for the next day.
+
+Usage Instructions
+------------------
+1. **Run the Application**:
+   - Compile and execute `walkIn.cpp`.
+
+2. **Entering Patient Information**:
+   - Enter the 10-digit CareCard number when prompted.
+   - If you are a new patient, input all required details.
+   - If you are an existing patient, select an option to modify, remove, or view your record.
+
+3. **Modifying Records**:
+   - Choose from the options to update your first name, address, email, or phone number.
+
+4. **Daily Operations**:
+   - After processing, view the list of patients who visited today.
+   - Press 'l' to create a new patient list for the next day.
+
+Troubleshooting
+---------------
+- **Compilation Errors**:
+  - Ensure all required header files (Patient.h, List.h) are present.
+  - Verify that the code is compiled with a standard C++ compiler.
+
+- **Runtime Issues**:
+  - Ensure that valid inputs are provided, especially the 10-digit CareCard number.
+  - Follow any error messages displayed and re-enter the required information.
+
+Contact
+-------
+For any questions or issues, please contact Apurv Nerurkar
