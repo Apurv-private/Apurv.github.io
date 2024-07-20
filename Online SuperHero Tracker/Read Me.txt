@@ -1,0 +1,98 @@
+Title: Online Superhero Tracker API
+-----------------------------------
+
+Welcome to the Online Superhero Tracker API! This Spring Boot application 
+provides RESTful endpoints for managing a list of superheroes. You can add, 
+remove, update, and list superheroes through the API.
+
+Files and Directories
+---------------------
+1. SuperheroController.java - Contains RESTful API endpoints for managing 
+   superheroes.
+2. Application.java - The main entry point for the Spring Boot application.
+3. Superhero.java - Represents the superhero model (not provided in this 
+   snippet).
+
+Dependencies
+------------
+- Spring Boot: Required for running the application and handling HTTP requests.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **SuperheroController.java**
+   - **Overview**: 
+     Provides RESTful endpoints for interacting with the superhero data.
+   - **Key Features**:
+     - **`@GetMapping("/WelcomeScreen")`**: Returns a welcome message.
+     - **`@PostMapping("/add")`**: Adds a new superhero to the list. 
+       Validates that height and civilian save count are non-negative.
+     - **`@GetMapping("/ListAll")`**: Retrieves the list of all superheroes.
+     - **`@PostMapping("/remove/{id}")`**: Removes a superhero by ID. 
+       Throws an exception if the ID is invalid.
+     - **`@PostMapping("/update/{id}")`**: Updates an existing superhero's 
+       information by ID. Validates that height and civilian save count are 
+       non-negative.
+     - **`@ExceptionHandler(IllegalArgumentException.class)`**: Handles 
+       invalid input errors.
+
+2. **Application.java**
+   - **Overview**: 
+     The main class that runs the Spring Boot application.
+   - **Key Features**:
+     - **`public static void main(String[] args)`**: Starts the Spring Boot 
+       application.
+
+Usage Instructions
+------------------
+
+1. **Running the Application**:
+   - Run the `Application.java` file to start the Spring Boot application. 
+     This will start a local server to handle API requests.
+
+2. **Accessing Endpoints**:
+   - **Welcome Message**:
+     - **Endpoint**: `GET /WelcomeScreen`
+     - **Description**: Returns a welcome message.
+
+   - **Add Superhero**:
+     - **Endpoint**: `POST /add`
+     - **Request Body**: JSON object representing a superhero.
+     - **Description**: Adds a new superhero to the list. Height and civilian 
+       save count must be non-negative.
+
+   - **List All Superheroes**:
+     - **Endpoint**: `GET /ListAll`
+     - **Description**: Retrieves and returns the list of all superheroes.
+
+   - **Remove Superhero**:
+     - **Endpoint**: `POST /remove/{id}`
+     - **Path Variable**: `id` - The ID of the superhero to be removed.
+     - **Description**: Removes a superhero by ID. Returns the updated list. 
+       Throws an exception if the ID is invalid.
+
+   - **Update Superhero**:
+     - **Endpoint**: `POST /update/{id}`
+     - **Path Variable**: `id` - The ID of the superhero to be updated.
+     - **Request Body**: JSON object with updated superhero details.
+     - **Description**: Updates the information of an existing superhero. 
+       Height and civilian save count must be non-negative.
+
+3. **Handling Errors**:
+   - Invalid inputs (e.g., negative values for height or civilian save count) 
+     will result in a `400 Bad Request` error with a message "Invalid inputs."
+
+Code Structure and Comments
+---------------------------
+- The code is organized into two main classes: `SuperheroController` for 
+  REST API endpoints and `Application` for running the Spring Boot application.
+- Comments and annotations are used to explain the purpose and functionality 
+  of methods and exception handling.
+
+Dependencies
+------------
+- Spring Boot: Ensure you have the Spring Boot framework included in your project.
+
+Author and License
+------------------
+- Developed by Apurv Nerurkar
