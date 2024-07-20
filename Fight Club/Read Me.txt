@@ -1,0 +1,82 @@
+Title: Fight Club Game
+----------------------
+
+Welcome to the Fight Club Game! This C++ console application allows users 
+to participate in various types of fighting matches. Players can choose 
+from different game modes and attacks to compete against each other.
+
+Files and Directories
+---------------------
+1. main.cpp - The main file that initializes the game and handles user input.
+2. Character.h - Header file defining the Character class, including attributes and methods for player actions.
+3. MoveSet.h - Header file managing the set of moves a character can perform.
+4. Game.h - Header file defining the Game class, including methods for different match types.
+
+Dependencies
+------------
+- Standard C++ library.
+
+Description of Classes and Key Methods
+--------------------------------------
+
+1. **main.cpp**
+   - **Overview**:
+     The main file where the application runs. It manages the game's flow, 
+     handles user input, and initializes the game.
+   - **Key Features**:
+     - Prompts the user to select the number of players (2 or 3).
+     - Provides options for different game modes: one-to-one, handicap, and triple threat.
+     - Creates and manages Character objects based on user input.
+     - Invokes methods from the Game class to handle the chosen match type and player actions.
+     - Outputs results and updates based on player interactions.
+
+2. **Character.h**
+   - **Overview**:
+     Defines the Character class representing individual players in the game.
+   - **Key Features**:
+     - Attributes include HP, stamina, and methods for attacks and finishers.
+     - Methods to get and set player attributes, such as HP and stamina.
+     - Functions to perform attacks and apply effects to opponents.
+
+3. **MoveSet.h**
+   - **Overview**:
+     Manages the set of moves a character can perform.
+   - **Key Features**:
+     - Methods for defining and executing various attacks and finisher moves.
+     - Keeps track of attack names and their associated power.
+
+4. **Game.h**
+   - **Overview**:
+     Manages the game logic for different match types.
+   - **Key Features**:
+     - Methods for one-to-one matches, triple threat matches, and handicap matches.
+     - Logic for player turns, attack selection, and outcome determination.
+     - Handles player interactions and ensures valid inputs.
+
+Game Modes
+----------
+1. **One-to-One**:
+   - Two players compete against each other in a turn-based manner.
+   - Players choose attacks and finishers in turn to reduce their opponent's HP.
+
+2. **Triple Threat**:
+   - Three players compete in a free-for-all match.
+   - Players can choose which opponent to attack and use their moves strategically.
+
+3. **Handicap**:
+   - One player faces two opponents in a 1v2 scenario.
+   - The single player and the two opponents take turns choosing their moves.
+
+Troubleshooting
+---------------
+- **Compilation Errors**:
+  - Ensure all necessary files (Character.cpp, MoveSet.cpp, etc.) are in the same directory.
+  - Verify that all header files are included and paths are correctly set.
+
+- **Runtime Issues**:
+  - Check player input to ensure valid choices are made.
+  - Review any displayed errors for hints on what might be going wrong.
+
+Contact
+-------
+For any questions or issues, please contact the project maintainer.
