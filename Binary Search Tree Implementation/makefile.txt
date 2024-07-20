@@ -1,0 +1,20 @@
+all: ta
+
+ta: TransApp.o BST.o BSTNode.o WordPair.o ElementAlreadyExistsInBSTException.o ElementDoesNotExistInBSTException.o
+	g++ -Wall -o ta TransApp.o BST.o BSTNode.o WordPair.o ElementAlreadyExistsInBSTException.o ElementDoesNotExistInBSTException.o
+
+TransApp.o: TransApp.cpp
+	g++ -c -std=c++98 TransApp.cpp
+
+WordPair.o: WordPair.h
+	g++ -c WordPair.h
+
+ElementAlreadyExistsInBSTException.o: ElementAlreadyExistsInBSTException.h
+	g++ -c ElementAlreadyExistsInBSTException.h
+
+ElementDoesNotExistInBSTException.o: ElementDoesNotExistInBSTException.h
+	g++ -c ElementDoesNotExistInBSTException.h
+
+clean:
+	rm -f ta *.o
+

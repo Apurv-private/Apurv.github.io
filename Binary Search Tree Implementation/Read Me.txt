@@ -1,0 +1,103 @@
+Title: BST (Binary Search Tree) Implementation
+------------------------------------------------
+
+Welcome to the BST (Binary Search Tree) Implementation! This C++ application
+demonstrates the use of a Binary Search Tree data structure. It includes
+operations for inserting elements, retrieving elements, and performing
+in-order traversal.
+
+Files and Directories
+---------------------
+1. BST.h - Header file defining the BSTNode and BST classes, including their methods.
+2. BST.cpp - Implementation file for the BST class methods.
+3. TransApp.cpp - Main file that tests the functionality of the BST class.
+
+Dependencies
+------------
+- Standard C++ library.
+
+Description of Key Classes
+---------------------------
+
+1. **class ElementDoesNotExistInBSTException**
+   - **Overview**: 
+     Exception class for handling cases where an element does not exist in the BST.
+   - **Constructor**: 
+     Initializes the exception with a message.
+
+2. **class ElementAlreadyExistsInBSTException**
+   - **Overview**: 
+     Exception class for handling cases where an element already exists in the BST.
+   - **Constructor**: 
+     Initializes the exception with a message.
+
+3. **class BSTNode**
+   - **Overview**: 
+     Represents a node in the Binary Search Tree.
+   - **Key Features**:
+     - Contains an element, left child, and right child.
+     - Provides methods for setting and getting the element and children.
+     - Includes helper methods to check if the node is a leaf or has children.
+
+4. **class BST**
+   - **Overview**: 
+     Represents the Binary Search Tree itself.
+   - **Key Features**:
+     - Manages the root node and the count of elements.
+     - Provides methods for insertion, retrieval, and in-order traversal.
+     - Handles exceptions for element insertion and retrieval.
+
+Description of Key Functions
+----------------------------
+
+1. **BST()**
+   - **Overview**: 
+     Default constructor for the BST class.
+
+2. **BST(ElementType& element)**
+   - **Overview**: 
+     Parameterized constructor for initializing the BST with a root element.
+
+3. **BST(const BST<ElementType>& aBST)**
+   - **Overview**: 
+     Copy constructor for creating a copy of an existing BST.
+
+4. **~BST()**
+   - **Overview**: 
+     Destructor for cleaning up the BST.
+
+5. **int getElementCount() const**
+   - **Overview**: 
+     Returns the number of elements in the BST.
+
+6. **void insert(const ElementType& newElement) throw(ElementAlreadyExistsInBSTException)**
+   - **Overview**: 
+     Inserts a new element into the BST.
+   - **Exception**: 
+     Throws an exception if the element already exists.
+
+7. **ElementType& retrieve(const ElementType& targetElement) throw(ElementDoesNotExistInBSTException)**
+   - **Overview**: 
+     Retrieves an element from the BST.
+   - **Exception**: 
+     Throws an exception if the element does not exist.
+
+8. **void traverseInOrder() const**
+   - **Overview**: 
+     Performs an in-order traversal of the BST and prints the elements.
+
+Usage Instructions
+------------------
+1. **Compile and Run**:
+   - Ensure all files (`BST.h`, `BST.cpp`, `TransApp.cpp`) are in the same directory.
+   - Compile the project using a C++ compiler.
+   - Execute the resulting binary.
+
+2. **Testing the BST**:
+   - The `TransApp.cpp` file contains test cases for inserting, retrieving, and traversing elements in the BST.
+   - Review the console output to see the results of these operations.
+
+
+Contact
+-------
+For any questions or issues, please contact the author of the code.
